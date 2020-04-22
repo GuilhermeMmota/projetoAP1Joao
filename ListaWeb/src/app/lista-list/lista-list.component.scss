@@ -1,0 +1,38 @@
+.listaItem {
+  margin-bottom: 20px;
+  width: 500px;
+  margin-top: 5%;
+  border: 2px solid black;
+}
+.container {
+  display: flexbox;
+  padding-left: 30%;
+  text-align: center;
+}
+.atodo{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5%;
+  font-size: 18px;
+  text-align: center;
+}
+
+mat-card-header  {
+  size: 2em;
+  display: flex;
+
+mat-icon {
+    font-size: 3em;
+  }
+
+  .high {
+      color:red;
+  }
+
+.medium {
+    color: yellow;
+}
+
+.low {
+  color: lightgreen;
+  }
+}

@@ -1,0 +1,41 @@
+<p class="atodo" *ngIf="!listaListArray?.length">
+  Nenhum Produto adicionado.
+</p>
+<div class="container">
+  <mat-card class="listaItem">
+    <div class="card-footer text-muted">
+        <button class="" mat-button>
+            <a class="atodo" [routerLink]="[ '/lista/']">
+                <mat-icon>add</mat-icon> Adicionar Produto
+            </a>
+        </button>
+    </div>
+  </mat-card>
+  <ng-container *ngFor="let item of listaListArray; let itemIndex = index">
+      <mat-card class="listaItem">
+          <mat-card-header>
+              <div mat-card-avatar>
+              <span class="md-headline {{item.priority==1 ? 'high' : item.priority==2 ? 'medium' : 'low'}}">
+                  <mat-icon>{{ item.priority==1 ? 'error' : item.priority==2 ? 'warning' : 'info'}}</mat-icon>
+              </span>
+              </div>
+              <mat-card-title>
+              {{item.title}}
+              </mat-card-title>
+              <mat-card-subtitle>Criado em {{item.creationDate}}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-actions layout="row" align="end">
+              <button mat-button>
+                <a [routerLink]="[ '/lista', item.id]">
+                  <mat-icon>editar</mat-icon>
+                </a>
+              </button>
+              <button mat-button (click)="concludeLista(itemIndex)" >
+                  <mat-icon>{{ item.done ? 'delete' : 'check'}}</mat-icon>
+              </button>
+          </mat-card-actions>
+      </mat-card>
+  </ng-container>
+</div>
+
+<ngx-loading [show]="loading"></ngx-loading>
