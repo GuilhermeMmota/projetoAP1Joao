@@ -7,10 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ListaAPI.Data;
 using ListaAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ListaAPI.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
 
     public class ListasController : ControllerBase
