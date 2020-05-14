@@ -17,6 +17,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using Swashbuckle.AspNetCore.Swagger;
+using System.Reflection;
+using System.IO;
+using Microsoft.OpenApi.Models;
+
 
 namespace ListaAPI
 {
@@ -66,6 +71,11 @@ namespace ListaAPI
                     ValidateAudience = false
                 };
             });
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ListaAPI", Version = "v1" });
+            });
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -78,6 +88,17 @@ namespace ListaAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            //Ativa o Swagger
+            app.UseSwagger();
+
+            // Ativa o Swagger UI
+            app.UseSwaggerUI(opt =>
+            {
+                opt.SwaggerEndpoint("/swagger/v1/swagger.json", "ListaAPI V1");
+                opt.RoutePrefix = string.Empty;
+            });
+
 
             app.UseCors(c => c.AllowAnyOrigin()
                 .AllowAnyMethod()

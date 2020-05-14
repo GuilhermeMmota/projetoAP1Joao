@@ -152,3 +152,8 @@ C:\Cursos\ProjetoAP1Joao\ListaAPI\obj\Debug\netcoreapp3.1\staticwebassets\ListaA
 C:\Cursos\ProjetoAP1Joao\ListaAPI\obj\Debug\netcoreapp3.1\ListaAPI.dll
 C:\Cursos\ProjetoAP1Joao\ListaAPI\obj\Debug\netcoreapp3.1\ListaAPI.pdb
 C:\Cursos\ProjetoAP1Joao\ListaAPI\obj\Debug\netcoreapp3.1\ListaAPI.genruntimeconfig.cache
+C:\Cursos\ProjetoAP1Joao\ListaAPI\obj\Debug\netcoreapp3.1\ListaAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Cursos\ProjetoAP1Joao\ListaAPI\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Cursos\ProjetoAP1Joao\ListaAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Cursos\ProjetoAP1Joao\ListaAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Cursos\ProjetoAP1Joao\ListaAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
